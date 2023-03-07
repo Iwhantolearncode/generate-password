@@ -9,12 +9,11 @@ while True:
 	print('\n')
 	taille = int(input('chooose the size of your password : > ')) 
 	print()
-	choice = input('do you whant to generate a secure password >> press 1 	 or 	a ULTRA secure password >> press 2 > ')
+	choice = input('do you whant to generate a secure password >> press 1 or a ULTRA secure password >> press 2 > ')
 	print()
 	
 	if choice == '2':
 		print('[+] Generating your ULTRA secure password (option 2)...')
-		print()
 		gen = ''.join(sc.choice(tt) for i in range(1000000))
 		r1 = ''.join(sc.choice(gen) for u in range(1000000))
 		r2 = ''.join(sc.choice(r1) for o in range(10000))
@@ -25,7 +24,6 @@ while True:
 		
 	elif choice == '1':
 		print('[+] Generating your secure password (option 1)...')
-		print()
 		gen_ez = ''.join(sc.choice(tt) for e in range(taille))
 		print('[*] Your secure password is > ' + gen_ez)
 		print()
@@ -35,5 +33,5 @@ while True:
 	retry = input('Do you whant to generate another password ? (y/n)  > ')
 	if retry.lower() == 'n':
 		print('\n')
-		print('Exiting...')
+		print('[-] Exiting...')
 		break
